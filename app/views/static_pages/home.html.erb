@@ -1,0 +1,79 @@
+<%= render 'layouts/header' %>
+<div class="jumbotron landing-block use-secondary-color-ft">
+  <h1 class="text-center pagination-centered use-second-ft" id = "h0" >MV's bike club.</h1>
+  <h3 class="text-center pagination-centered">Destress, socialize, have fun.</h3>
+</div>
+
+<div class="jumbotron text-center pagination-centered white-back med" id = "what">
+  <hr class = "line-spacing">
+  <p>EST. 2015</p>
+  <h1>Monta Vista's social</h1>
+  <h1>bike club</h1>
+  <p class="use-light-primary-ft">
+    Originally the MV bike club, we are back <br>
+    with a new name and a new goal: to <br>
+    unite students with biking. <br>
+  </p>
+</div>
+
+<div class="jumbotron text-center inverted">
+  <p class = "pagination-centered">SF RIDE /	    DINNER RIDES	    /	    WEEKLY RIDES	    /	    DOWNTOWN COMMUTING</p>
+</div>
+
+<div class="jumbotron text-center pagination-centered">
+  <h3 class="mvh">About our goals</h3>
+  <div class="container">
+    <div class="row">
+      <div class = "col-md-1">
+        <h2>01</h2>
+        <hr>
+      </div>
+      <div class = "col-md-3">
+        <h3 class = "text-left">Work hard,<br>play hard</h3>
+        <p class="use-light-primary-ft text-left">
+          School is hard. We are here
+          to make the experience
+          better.
+        </p>
+      </div>
+      <div class = "col-md-1">
+        <h2>02</h2>
+        <hr>
+      </div>
+      <div class = "col-md-3">
+        <h3 class = "text-left">Not just<br>biking</h3>
+        <p class="use-light-primary-ft text-left">
+          We are here to help you guys
+          learn about yourself, your
+          community, and your friends.
+        </p>
+      </div>
+      <div class = "col-md-1">
+        <h2>03</h2>
+        <hr>
+      </div>
+      <div class = "col-md-3">
+        <h3 class = "text-left">One big<br>family</h3>
+        <p class="use-light-primary-ft text-left">
+          We are here to build a
+          family.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class = "text-center container-fluid">
+  <div class = 'row'>
+    <div class = "col-md-6 inverted sign-up-block">
+    </div>
+    <div class = "col-md-6 border jumbotron pagination-centered text-center" style="margin-bottom: 0;">
+      <%= link_to (image_tag "biken_images.png", width: '174', height: '150') %><br/>
+      <h2>Rides, Rides, and Rides</h2>
+      <p class="light-text">
+        Rides are here all the time and you are <br>
+        welcome to go to how many you want.
+      </p>
+      <%= button_to "Sign up", new_user_registration_path, :class => "btn-lg btn phl", :method => :get  %><br />
+    </div>
+  </div>
+</div>

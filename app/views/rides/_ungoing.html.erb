@@ -1,0 +1,6 @@
+<%= form_for(current_user.active_relationships.find_by(ride_id: ride.id),
+           html: { method: :delete },
+           remote: true) do |f| %>
+    <%= f.submit "Na", class: "btn btn-lg" %><br>
+    <h5>People going: <%= ride.attendees.count %></h5>
+<% end %>

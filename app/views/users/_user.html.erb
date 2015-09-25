@@ -1,0 +1,7 @@
+<li>
+  <h4><%= user.email %></h4>
+  <h4><%= user.username %></h4>
+  <h4><%= user.fullname %></h4>
+  <h4>admin: <%= user.admin? %></h4>
+  <%= link_to "Admin Change", setAdmin_users_path(:id => user.id), method: :patch, data: {confirm: "You sure?"} %>
+</li>

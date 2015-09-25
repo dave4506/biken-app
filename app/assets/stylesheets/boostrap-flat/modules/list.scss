@@ -1,0 +1,12 @@
+.list {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 10px 10px;
+    background-color: $flat-gallery;
+    border-radius: $radius;
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+}

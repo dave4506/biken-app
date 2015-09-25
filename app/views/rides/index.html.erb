@@ -1,0 +1,14 @@
+<%= render 'layouts/header' %>
+<div class = "jumbotron inverted mth text-center ">
+  <h3>Rides</h3>
+  <% if current_user.try(:admin?) %>
+    <%= link_to "Create a ride", new_ride_path,  class: "btn btn-default btn-inverse" %>
+  <% end %>
+</div>
+<div class = "container text-center">
+  <% if @rides_feed.any? %>
+    <ol class="list">
+      <%= render @rides_feed %>
+    </ol>
+  <% end %>
+</div>

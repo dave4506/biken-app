@@ -1,0 +1,25 @@
+/* default colors */
+$light-grey: #777;
+$dark-grey: #222;
+
+/* brand colors */
+$amount: 40%;
+$primary-color: $dark-grey;
+$accent-color: white;
+$lighten-primary-color: lighten($primary-color, $amount);
+
+/* fonts */
+$primary-font: 'Roboto', sans-serif;
+$secondary-font: 'Droid Serif', serif;
+$font-size-base:                 1em;
+
+$font-size-h0:              floor(($font-size-base * 6.888)); // ~124px
+$font-size-h1:              floor(($font-size-base * 3.444)); // ~62px
+$font-size-h2:              ceil(($font-size-base * 2.889)); // ~52px
+$font-size-h3:              ceil(($font-size-base * 2.222)); // ~40px
+$font-size-h4:              ceil(($font-size-base * 1.611)); // ~29px
+$font-size-h5:              floor(($font-size-base * 1.556)); // ~28px
+$font-size-h6:              ceil(($font-size-base * 1.333)); // ~24px
+
+/* custom */
+$radius: 10px;

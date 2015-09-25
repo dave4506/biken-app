@@ -1,0 +1,22 @@
+.inverted {
+  color:$accent-color;
+  background-color: $primary-color;
+}
+.use-secondary-color {
+  color: $accent-color;
+  &:hover {
+    color: $accent-color;
+  }
+}
+.use-primary-color {
+  color: $primary-color;
+  &:hover {
+    color: $primary-color;
+  }
+}
+.danger-color {
+  color: $flat-pomegranate;
+}
+.body {
+  background-color: $primary-color;
+}

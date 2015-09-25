@@ -1,0 +1,22 @@
+<%= render 'layouts/header' %>
+<div class = "container-full fullscreen-block inverted">
+  <div class = "container">
+    <div class = "big-block block text-center">
+      <% if @user.fullname.nil? %>
+        <h3><%= @user.username %></h3>
+      <% else %>
+        <h3><%= @user.fullname %></h3>
+      <% end %>
+      <div class="round">
+        <%= image_tag(current_user.avatar.url(:medium), :class => "round_img") %><br/>
+      </div>
+      <h4>Joined</h4>
+      <h3 class="zero"><%= @user.event.count %><h3>
+        <% if @user.event.count == 1 %>
+          <h4>ride.</h4><br>
+        <% else %>
+          <h4>rides.</h4><br>
+        <% end %>
+    <div>
+  </div>
+</div>

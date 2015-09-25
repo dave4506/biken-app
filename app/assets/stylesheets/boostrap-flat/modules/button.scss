@@ -1,0 +1,42 @@
+@mixin btn-colors-default($background-color, $front-color) {
+  background-color: $background-color;
+  border-color: $background-color;
+  border-radius: $radius;
+  border-width: thick;
+  color: $front-color;
+}
+
+@mixin btn-colors-diffborders($background-color, $front-color) {
+  @include btn-colors-default($background-color,$front-color);
+  border-color: $front-color;
+}
+
+@mixin transitions(){
+  -moz-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+}
+.btn {
+   @include btn-colors-default($primary-color,$accent-color);
+   @include transitions();
+  &:hover{
+    @include btn-colors-diffborders($accent-color,$primary-color);
+  }
+}
+
+.btn-danger {
+  @include btn-colors-default($flat-pomegranate,$accent-color);
+  @include transitions();
+ &:hover{
+   @include btn-colors-diffborders($accent-color,$flat-pomegranate);
+ }
+}
+
+.btn-inverse {
+  @include btn-colors-default($accent-color,$primary-color);
+  @include transitions();
+ &:hover{
+   @include btn-colors-diffborders($primary-color,$accent-color);
+ }
+}

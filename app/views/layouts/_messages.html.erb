@@ -1,0 +1,13 @@
+<% if flash.any? %>
+  <div class="gap">
+    <% flash.each do |key, value| %>
+      <div class="container alert alert-<%= key %>">
+          <ul>
+            <li>
+              <%= value %>
+            </li>
+          </ul>
+      </div>
+    <% end %>
+  </div>
+<% end %>

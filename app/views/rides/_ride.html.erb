@@ -1,0 +1,48 @@
+<li id="ride-<%= ride.id %>">
+  <div class = "row zero">
+    <div class = "col-md-1">
+      <div class="round rd-small">
+        <%= image_tag(ride.user.avatar.url(:medium), :class => "round_img") %>
+      </div>
+    </div>
+    <div class = "col-md-1" >
+      <% if ride.user.fullname.nil? %>
+        <h5><%= ride.user.username %></h5>
+      <% else %>
+        <h5><%= ride.user.fullname %></h5>
+      <% end %>
+    </div>
+    <div class = "col-md-2" >
+      <h5><small>Club officer</small></h5>
+    </div>
+  </div>
+  <h1><%= ride.title %></h1>
+  <p>Description: <%= ride.content %></p<br/>
+
+  <span class="meet">
+    <h5>Meeting at: <br> <%= ride.meet_at %></h5>
+  </span>
+
+  <span class="date">
+    <h5>Starting at</h5>
+    <h5><%= ride.start_at.to_time.utc.strftime("%a, %d %b %Y %H:%M") %></h5>
+    <h5>Ending at</h5>
+    <h5><%= ride.end_at.to_time.utc.strftime("%a, %d %b %Y %H:%M") %></h5><br/>
+  </span>
+
+  <div id="follow_form">
+  <% if current_user.going?(ride) %>
+    <%= render 'ungoing', :ride => ride %>
+  <% else %>
+    <%= render 'going', :ride => ride %>
+  <% end %>
+  </div>
+  <% if current_user.try(:admin?) %>
+    <%= link_to "edit", edit_ride_path(ride),:class => "use-primary-color" %>
+    <%= link_to "delete", ride, method: :delete, data: {confirm: "You sure?"},:class => "use-primary-color" %>
+    <br>
+  <% end %>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(ride.created_at) %> ago.
+  </span>
+</li>

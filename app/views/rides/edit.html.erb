@@ -1,0 +1,35 @@
+<%= render 'layouts/header' %>
+<div class = "mth phh container text-center">
+  <h3>Update the ride</h3>
+  <%= form_for(@ride, html: { multipart: true }) do |f| %>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title, placeholder: "Whats the name of the ride?",  :class => "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.label :content %>
+    <%= f.text_area :content, placeholder: "Whats happening on the ride?",  :class => "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.label :meet_at %>
+    <%= f.text_field :meet_at, placeholder: "Where should we meet?",  :class => "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :start_at %>
+    <%= f.datetime_select :start_at %>
+  </div>
+  <div class="form-group">
+    <%= f.label :end_at %>
+    <%= f.datetime_select :end_at %>
+  </div>
+  <%= f.submit "Update post", class: "btn btn-default" %>
+<% end %>
+</div>
+
+<script type="text/javascript">
+  $('.datetimepicker').datetimepicker(
+  {
+  sideBySide: true
+  });
+</script>
