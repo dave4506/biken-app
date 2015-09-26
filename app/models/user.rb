@@ -12,7 +12,11 @@ class User < ActiveRecord::Base
       :case_sensitive => false
     }
   has_many :rides, dependent: :destroy
-  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100#" }, :default_url => "/images/:style/missing.png"
+  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100#" }, :default_url => "/images/:style/missing.png",
+  :storage => :s3,
+  :s3_credentials => "#{Rails.root}/config/s3.yml",
+  :path => ":attachment/:id/:style.:extension",
+  :bucket => "biken"
 
   has_many :active_relationships, class_name:  "Relationship",
                                     foreign_key: "user_id",
