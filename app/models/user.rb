@@ -11,6 +11,8 @@ class User < ActiveRecord::Base
     :uniqueness => {
       :case_sensitive => false
     }
+  validates :fullname,
+    :presence => true
   has_many :rides, dependent: :destroy
   has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100#" }, :default_url => "/images/:style/missing.png",
   :storage => :s3,

@@ -10,7 +10,7 @@ $lighten-primary-color: lighten($primary-color, $amount);
 
 /* fonts */
 $primary-font: 'Roboto', sans-serif;
-$secondary-font: 'Droid Serif', serif;
+$secondary-font: 'Lato', serif;
 $font-size-base:                 1em;
 
 $font-size-h0:              floor(($font-size-base * 6.888)); // ~124px

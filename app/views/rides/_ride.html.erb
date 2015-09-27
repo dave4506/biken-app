@@ -7,9 +7,9 @@
     </div>
     <div class = "col-md-1" >
       <% if ride.user.fullname.nil? %>
-        <h5><%= ride.user.username %></h5>
+        <h5><%= link_to ride.user.username , ride.user,:class => "use-primary-color"  %></h5>
       <% else %>
-        <h5><%= ride.user.fullname %></h5>
+        <h5><%= link_to ride.user.fullname , ride.user,:class => "use-primary-color"  %></h5>
       <% end %>
     </div>
     <div class = "col-md-2" >

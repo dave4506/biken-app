@@ -2,6 +2,7 @@
   <div class="gap">
     <% flash.each do |key, value| %>
       <div class="container alert alert-<%= key %>">
+        <a href="#" data-dismiss="alert" class="close">×</a>
           <ul>
             <li>
               <%= value %>

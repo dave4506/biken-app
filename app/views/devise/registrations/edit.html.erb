@@ -38,26 +38,24 @@
         <% end %>
 
         <div class="field form-group">
-          <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+          <%= f.label "new password" %> <br />
           <%= f.password_field :password, autocomplete: "off" , :class => "form-control"%>
         </div>
 
         <div class="field form-group">
-          <%= f.label :password_confirmation %><br />
+          <%= f.label "new password confirmation" %><br />
           <%= f.password_field :password_confirmation, autocomplete: "off", :class => "form-control" %>
         </div>
 
         <div class="field form-group">
-          <%= f.label :current_password %> <i>(we need your password to change!)</i><br />
+          <%= f.label "Current password(required)" %><br />
           <%= f.password_field :current_password, autocomplete: "off", :class => "form-control" %>
         </div>
 
-        <div class="actions">
+        <div class="actions form-group">
           <%= f.submit "Update" , :class => "btn btn-lg"%>
         </div>
       <% end %>
-
-      <h4 class = "danger-color">Cancel my account</h4>
 
       <p class = "danger-color">Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, :class => "btn btn-danger" %></p>
 
