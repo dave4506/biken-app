@@ -2,6 +2,8 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
       <%= link_to(image_tag("biken-logo.png" , id:"logo"), root_path, class: 'navbar-brand' ) %>
+      <%= link_to("Biken", root_path, id: 'logo-text' ) %>
+
     <nav>
       <ul class="nav navbar-nav navbar-right">
       <% if user_signed_in? %>
