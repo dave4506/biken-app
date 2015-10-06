@@ -39,8 +39,9 @@ class RidesController < ApplicationController
   def update
     @ride = Ride.find(params[:id])
     if @ride.update_attributes(ride_params)
-      flash[:success] = "Profile updated"
-      redirect_to @user
+      puts "Here gots"
+      flash[:success] = "Ride updated"
+      redirect_to rides_url()
     else
       render 'edit'
     end
